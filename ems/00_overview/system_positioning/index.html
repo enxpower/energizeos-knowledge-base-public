@@ -1,0 +1,1113 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Public, sanitized EMS documentation index (no wiring, I/O tables, FAT scripts, interlock matrices, or proprietary logic).">
+      
+      
+        <meta name="author" content="Energize Solutions Inc.">
+      
+      
+        <link rel="canonical" href="https://ems.energizeos.com/ems/00_overview/system_positioning/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>EnergizeOS™ EMS — Master Index (Public Edition) - EnergizeOS™ EMS Knowledge Base (Public)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#energizeostm-ems-master-index-public-edition" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EnergizeOS™ EMS Knowledge Base (Public)" class="md-header__button md-logo" aria-label="EnergizeOS™ EMS Knowledge Base (Public)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EnergizeOS™ EMS Knowledge Base (Public)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EnergizeOS™ EMS — Master Index (Public Edition)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/enxpower/energizeos-knowledge-base-public" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    enxpower/energizeos-knowledge-base-public
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EnergizeOS™ EMS Knowledge Base (Public)" class="md-nav__button md-logo" aria-label="EnergizeOS™ EMS Knowledge Base (Public)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EnergizeOS™ EMS Knowledge Base (Public)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/enxpower/energizeos-knowledge-base-public" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    enxpower/energizeos-knowledge-base-public
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EMS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_functional_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_deployment_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_observability_and_audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observability & Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99_glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document role
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-system-positioning-and-boundary-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. System positioning and boundary declaration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0. System positioning and boundary declaration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-energizeostm-ems-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1 What EnergizeOS™ EMS is
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-what-energizeostm-ems-is-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2 What EnergizeOS™ EMS is not
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-system-architecture-public-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. System architecture — public view
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. System architecture — public view">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-layered-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Layered architecture overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ems-vs-protection-vs-device-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 EMS vs protection vs device control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-core-functional-domains-public-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Core functional domains (public scope)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Core functional domains (public scope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-grid-interaction-and-operating-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Grid interaction and operating states
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-energy-resource-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Energy resource coordination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-strategy-based-control-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Strategy-based control framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-control-authority-and-safety-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Control authority and safety philosophy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Control authority and safety philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-control-authority-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Control authority rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-safety-by-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Safety-by-design principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deployment-and-integration-model-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deployment and integration model (public)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Deployment and integration model (public)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-typical-deployment-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Typical deployment elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ems-integration-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 EMS integration interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-observability-audit-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Observability, audit, and traceability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-public-vs-private-knowledge-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Public vs private knowledge boundary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Public vs private knowledge boundary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-publicly-available-this-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Publicly available (this repository)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-restricted-private-not-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Restricted / private (not public)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-intended-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Intended audience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-governance-and-change-policy-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Governance and change policy (public)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-canonical-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Canonical reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/enxpower/energizeos-knowledge-base-public/edit/main/docs/ems/00_overview/system_positioning.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/enxpower/energizeos-knowledge-base-public/raw/main/docs/ems/00_overview/system_positioning.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="energizeostm-ems-master-index-public-edition">EnergizeOS™ EMS — Master Index (Public Edition)<a class="headerlink" href="#energizeostm-ems-master-index-public-edition" title="Permanent link">&para;</a></h1>
+<h2 id="document-role">Document role<a class="headerlink" href="#document-role" title="Permanent link">&para;</a></h2>
+<p>This document is the <strong>public, authoritative index</strong> of the EnergizeOS™ Energy Management System (EMS).<br />
+It defines system scope, functional boundaries, and architectural intent <strong>without</strong> exposing implementation details, internal control logic, wiring, or proprietary strategies.</p>
+<hr />
+<h2 id="0-system-positioning-and-boundary-declaration">0. System positioning and boundary declaration<a class="headerlink" href="#0-system-positioning-and-boundary-declaration" title="Permanent link">&para;</a></h2>
+<h3 id="01-what-energizeostm-ems-is">0.1 What EnergizeOS™ EMS is<a class="headerlink" href="#01-what-energizeostm-ems-is" title="Permanent link">&para;</a></h3>
+<p>EnergizeOS™ EMS is a <strong>supervisory-level</strong> energy management and control system designed for:</p>
+<ul>
+<li>Commercial &amp; Industrial (C&amp;I) energy systems</li>
+<li>Grid-connected, islanded, and hybrid microgrids</li>
+<li>Multi-source energy coordination (Grid / BESS / PV / DG / Load)</li>
+</ul>
+<p>Core responsibilities:</p>
+<ul>
+<li>Decision-making</li>
+<li>Coordination</li>
+<li>Authorization</li>
+<li>Auditability</li>
+</ul>
+<h3 id="02-what-energizeostm-ems-is-not">0.2 What EnergizeOS™ EMS is <strong>not</strong><a class="headerlink" href="#02-what-energizeostm-ems-is-not" title="Permanent link">&para;</a></h3>
+<p>To avoid ambiguity, EnergizeOS™ EMS explicitly does <strong>not</strong>:</p>
+<ul>
+<li>Replace inverter / PCS internal controllers</li>
+<li>Replace certified protection relays (anti-islanding, UV/OV, UF/OF)</li>
+<li>Perform autonomous <strong>protection-grade</strong> tripping without hardware interlock</li>
+<li>Act as a real-time protection device</li>
+<li>Expose internal control logic, FAT scripts, I/O tables, or relay matrices publicly</li>
+</ul>
+<blockquote>
+<p>EMS is supervisory intelligence, <strong>not</strong> protection hardware.</p>
+</blockquote>
+<hr />
+<h2 id="1-system-architecture-public-view">1. System architecture — public view<a class="headerlink" href="#1-system-architecture-public-view" title="Permanent link">&para;</a></h2>
+<h3 id="11-layered-architecture-overview">1.1 Layered architecture overview<a class="headerlink" href="#11-layered-architecture-overview" title="Permanent link">&para;</a></h3>
+<pre><code class="language-text">┌────────────────────────────────────┐
+│ UI / API Layer                     │
+│ (Operator, Admin, Integrations)    │
+├────────────────────────────────────┤
+│ Strategy &amp; Control Logic Layer     │
+│ (Policies, Scheduling, Arbitration)│
+├────────────────────────────────────┤
+│ Core Engine                        │
+│ (State Machine, Safety Gating)     │
+├────────────────────────────────────┤
+│ Data &amp; Interface Layer             │
+│ (Meters, Relays, Controllers)      │
+└────────────────────────────────────┘
+</code></pre>
+<p>This separation ensures:</p>
+<ul>
+<li>Deterministic behavior</li>
+<li>Auditable decisions</li>
+<li>Clear responsibility boundaries</li>
+</ul>
+<h3 id="12-ems-vs-protection-vs-device-control">1.2 EMS vs protection vs device control<a class="headerlink" href="#12-ems-vs-protection-vs-device-control" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Responsibility</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protection</td>
+<td>Trip on unsafe electrical conditions</td>
+<td>Certified relay</td>
+</tr>
+<tr>
+<td>Device control</td>
+<td>Real-time control loops</td>
+<td>PCS / DG controller</td>
+</tr>
+<tr>
+<td>EMS</td>
+<td>Authorization, sequencing, coordination</td>
+<td>EnergizeOS™</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-core-functional-domains-public-scope">2. Core functional domains (public scope)<a class="headerlink" href="#2-core-functional-domains-public-scope" title="Permanent link">&para;</a></h2>
+<h3 id="21-grid-interaction-and-operating-states">2.1 Grid interaction and operating states<a class="headerlink" href="#21-grid-interaction-and-operating-states" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Grid-connected operation</li>
+<li>Islanded operation</li>
+<li>Transition handling (Grid ↔ Island)</li>
+<li>State-aware authorization logic</li>
+</ul>
+<blockquote>
+<p>EMS decides <strong>when</strong>; hardware decides <strong>how fast</strong>.</p>
+</blockquote>
+<h3 id="22-energy-resource-coordination">2.2 Energy resource coordination<a class="headerlink" href="#22-energy-resource-coordination" title="Permanent link">&para;</a></h3>
+<p>Managed resources typically include:</p>
+<ul>
+<li>Battery Energy Storage Systems (BESS)</li>
+<li>Photovoltaic (PV) generation</li>
+<li>Diesel / gas generators (DG)</li>
+<li>Site loads and critical loads</li>
+</ul>
+<p>EMS provides:</p>
+<ul>
+<li>Priority coordination</li>
+<li>Constraint-aware dispatch</li>
+<li>Mode-dependent behavior</li>
+</ul>
+<h3 id="23-strategy-based-control-framework">2.3 Strategy-based control framework<a class="headerlink" href="#23-strategy-based-control-framework" title="Permanent link">&para;</a></h3>
+<p>EnergizeOS™ EMS executes <strong>explicit, versioned strategy modules</strong>, such as:</p>
+<ul>
+<li>Demand Charge Management (DCM)</li>
+<li>Time-of-Use Optimization (TOU)</li>
+<li>Grid / Island Transition Control</li>
+<li>Renewable Energy Utilization</li>
+<li>Generator Coordination (optional)</li>
+</ul>
+<blockquote>
+<p>Strategies are policy-driven, not hardcoded behaviors.</p>
+</blockquote>
+<hr />
+<h2 id="3-control-authority-and-safety-philosophy">3. Control authority and safety philosophy<a class="headerlink" href="#3-control-authority-and-safety-philosophy" title="Permanent link">&para;</a></h2>
+<h3 id="31-control-authority-rules">3.1 Control authority rules<a class="headerlink" href="#31-control-authority-rules" title="Permanent link">&para;</a></h3>
+<p><strong>Trip authority</strong></p>
+<ul>
+<li>Primary: protection relay</li>
+<li>Secondary: EMS (redundant, supervised)</li>
+</ul>
+<p><strong>Close authority</strong></p>
+<ul>
+<li>EMS is the <strong>sole authorized</strong> source</li>
+<li>Any non-EMS closing path is considered <strong>out of scope</strong></li>
+</ul>
+<h3 id="32-safety-by-design-principles">3.2 Safety-by-design principles<a class="headerlink" href="#32-safety-by-design-principles" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fail-safe over fail-operational</li>
+<li>Hardware-first protection</li>
+<li>Software-gated authorization</li>
+<li>Explicit interlock conditions</li>
+<li>Deterministic state transitions</li>
+</ul>
+<hr />
+<h2 id="4-deployment-and-integration-model-public">4. Deployment and integration model (public)<a class="headerlink" href="#4-deployment-and-integration-model-public" title="Permanent link">&para;</a></h2>
+<h3 id="41-typical-deployment-elements">4.1 Typical deployment elements<a class="headerlink" href="#41-typical-deployment-elements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>EMS Control Panel (ECP)</li>
+<li>Anti-Islanding Protection Panel (AIPP)</li>
+<li>Certified protection relays</li>
+<li>Utility-grade meters</li>
+<li>UPS-backed control power</li>
+</ul>
+<h3 id="42-ems-integration-interfaces">4.2 EMS integration interfaces<a class="headerlink" href="#42-ems-integration-interfaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Discrete I/O (DO / DI)</li>
+<li>Industrial protocols (e.g., Modbus TCP)</li>
+<li>Event &amp; status feedback loops</li>
+</ul>
+<blockquote>
+<p>Interface definitions exist, but are not public artifacts.</p>
+</blockquote>
+<hr />
+<h2 id="5-observability-audit-and-traceability">5. Observability, audit, and traceability<a class="headerlink" href="#5-observability-audit-and-traceability" title="Permanent link">&para;</a></h2>
+<p>EnergizeOS™ EMS emphasizes engineering auditability:</p>
+<ul>
+<li>State transitions are logged</li>
+<li>Decisions are attributable to conditions</li>
+<li>Strategy execution is traceable</li>
+<li>Operator actions are recorded</li>
+</ul>
+<p>This enables:</p>
+<ul>
+<li>FAT / SAT validation</li>
+<li>Post-event analysis</li>
+<li>Regulatory support</li>
+</ul>
+<hr />
+<h2 id="6-public-vs-private-knowledge-boundary">6. Public vs private knowledge boundary<a class="headerlink" href="#6-public-vs-private-knowledge-boundary" title="Permanent link">&para;</a></h2>
+<h3 id="61-publicly-available-this-repository">6.1 Publicly available (this repository)<a class="headerlink" href="#61-publicly-available-this-repository" title="Permanent link">&para;</a></h3>
+<ul>
+<li>System architecture overview</li>
+<li>Functional scope definitions</li>
+<li>Role &amp; responsibility boundaries</li>
+<li>Strategy categories (not implementations)</li>
+<li>Deployment concepts</li>
+</ul>
+<h3 id="62-restricted-private-not-public">6.2 Restricted / private (not public)<a class="headerlink" href="#62-restricted-private-not-public" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I/O point tables</li>
+<li>Relay wiring diagrams</li>
+<li>FAT procedures</li>
+<li>Interlock matrices</li>
+<li>Strategy logic details</li>
+<li>Control scripts &amp; thresholds</li>
+</ul>
+<blockquote>
+<p>These materials are delivered only under contract.</p>
+</blockquote>
+<hr />
+<h2 id="7-intended-audience">7. Intended audience<a class="headerlink" href="#7-intended-audience" title="Permanent link">&para;</a></h2>
+<ul>
+<li>EPCs &amp; system integrators</li>
+<li>Owners &amp; asset operators</li>
+<li>Utility &amp; interconnection reviewers</li>
+<li>Technical decision-makers</li>
+<li>Investors &amp; partners (technical due diligence)</li>
+</ul>
+<hr />
+<h2 id="8-governance-and-change-policy-public">8. Governance and change policy (public)<a class="headerlink" href="#8-governance-and-change-policy-public" title="Permanent link">&para;</a></h2>
+<ul>
+<li>This index is version-controlled</li>
+<li>Structural changes require formal review</li>
+<li>Terminology changes are treated as breaking changes</li>
+<li>Implementation details will never be added here</li>
+</ul>
+<hr />
+<h2 id="9-canonical-reference">9. Canonical reference<a class="headerlink" href="#9-canonical-reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li>System name: <strong>EnergizeOS™ EMS</strong></li>
+<li>Official documentation base: <strong>https://docs.energizeos.com/ems/</strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

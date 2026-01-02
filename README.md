@@ -10,8 +10,6 @@ Public repo: energizeos-knowledge-base-public
 
 ## Important
 
----
-
 # EnergizeOS™ EMS
 
 ## Master Index（Public Edition）
@@ -19,8 +17,6 @@ Public repo: energizeos-knowledge-base-public
 **Document Role**
 This document defines the **public, authoritative index** of the EnergizeOS™ Energy Management System (EMS).
 It establishes **system scope, functional boundaries, and architectural intent**, without exposing implementation details, control logic internals, wiring, or proprietary strategies.
-
----
 
 ## 0. System Positioning & Boundary Declaration
 
@@ -260,4 +256,4 @@ This Master Index is intended for:
 ---
 
 
-继续往前，不回头。
+

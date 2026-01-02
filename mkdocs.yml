@@ -1,7 +1,7 @@
 site_name: EnergizeOS™ EMS Knowledge Base (Public)
 site_description: Public, sanitized EMS documentation index (no wiring, I/O tables, FAT scripts, interlock matrices, or proprietary logic).
 site_author: Energize Solutions Inc.
-site_url: https://docs.energizeos.com/ems/
+site_url: https://ems.energizeos.com/
 
 repo_name: enxpower/energizeos-knowledge-base-public
 repo_url: https://github.com/enxpower/energizeos-knowledge-base-public
@@ -40,7 +40,7 @@ nav:
       - Glossary: ems/99_glossary/index.md
 
 extra:
-  SITE_BASE: https://docs.energizeos.com/ems/
+  SITE_BASE: https://ems.energizeos.com/
 
 plugins:
   - search

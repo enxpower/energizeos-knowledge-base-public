@@ -1,24 +1,46 @@
-site_name: EnergizeOS EMS Documentation (Public)
-site_description: Redacted subset of EnergizeOS EMS documentation.
+site_name: EnergizeOS™ EMS Knowledge Base (Public)
+site_description: Public, sanitized EMS documentation index (no wiring, I/O tables, FAT scripts, interlock matrices, or proprietary logic).
+site_author: Energize Solutions Inc.
 site_url: https://docs.energizeos.com/ems/
-use_directory_urls: true
+
+repo_name: enxpower/energizeos-knowledge-base-public
+repo_url: https://github.com/enxpower/energizeos-knowledge-base-public
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
 
 theme:
   name: material
   features:
-    - navigation.instant
     - navigation.sections
-    - navigation.tabs
-    - search.suggest
-    - search.highlight
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - attr_list
+  - def_list
+
+nav:
+  - EMS:
+      - Overview: ems/00_overview/index.md
+      - Architecture: ems/01_architecture/index.md
+      - Functional Domains: ems/02_functional_domains/index.md
+      - Deployment Model: ems/03_deployment_model/index.md
+      - Observability & Audit: ems/04_observability_and_audit/index.md
+      - Governance: ems/05_governance/index.md
+      - Glossary: ems/99_glossary/index.md
+
+extra:
+  SITE_BASE: https://docs.energizeos.com/ems/
 
 plugins:
   - search
-
-nav:
-  - Home: index.md
-  - Overview: overview.md
-  - Scope: scope.md
-  - Glossary: glossary.md
-  - Redacted Notice: redacted_notice.md
-

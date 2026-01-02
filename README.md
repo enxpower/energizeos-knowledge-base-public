@@ -1,49 +1,48 @@
-EnergizeOS™ EMS
-Master Index（Public Edition）
+# EnergizeOS™ EMS — Master Index (Public Edition)
 
-Document Role
-This document defines the public, authoritative index of the EnergizeOS™ Energy Management System (EMS).
-It establishes system scope, functional boundaries, and architectural intent, without exposing implementation details, control logic internals, wiring, or proprietary strategies.
+## Document role
 
-0. System Positioning & Boundary Declaration
-0.1 What EnergizeOS™ EMS Is
+This document is the **public, authoritative index** of the EnergizeOS™ Energy Management System (EMS).  
+It defines system scope, functional boundaries, and architectural intent **without** exposing implementation details, internal control logic, wiring, or proprietary strategies.
 
-EnergizeOS™ EMS is a supervisory-level energy management and control system designed for:
+---
 
-Commercial & Industrial (C&I) energy systems
+## 0. System positioning and boundary declaration
 
-Grid-connected, islanded, and hybrid microgrids
+### 0.1 What EnergizeOS™ EMS is
 
-Multi-source energy coordination (Grid / BESS / PV / DG / Load)
+EnergizeOS™ EMS is a **supervisory-level** energy management and control system designed for:
 
-Its core responsibilities are:
+- Commercial & Industrial (C&I) energy systems
+- Grid-connected, islanded, and hybrid microgrids
+- Multi-source energy coordination (Grid / BESS / PV / DG / Load)
 
-Decision-making
+Core responsibilities:
 
-Coordination
+- Decision-making
+- Coordination
+- Authorization
+- Auditability
 
-Authorization
+### 0.2 What EnergizeOS™ EMS is **not**
 
-Auditability
+To avoid ambiguity, EnergizeOS™ EMS explicitly does **not**:
 
-0.2 What EnergizeOS™ EMS Is NOT
+- Replace inverter / PCS internal controllers
+- Replace certified protection relays (anti-islanding, UV/OV, UF/OF)
+- Perform autonomous **protection-grade** tripping without hardware interlock
+- Act as a real-time protection device
+- Expose internal control logic, FAT scripts, I/O tables, or relay matrices publicly
 
-To avoid ambiguity, EnergizeOS™ EMS explicitly does NOT:
+> EMS is supervisory intelligence, **not** protection hardware.
 
-Replace inverter / PCS internal controllers
+---
 
-Replace certified protection relays (anti-islanding, UV/OV, UF/OF)
+## 1. System architecture — public view
 
-Perform autonomous protection-grade tripping without hardware interlock
+### 1.1 Layered architecture overview
 
-Act as a real-time protection device
-
-Expose internal control logic, FAT scripts, IO tables, or relay matrices publicly
-
-EMS is supervisory intelligence, not protection hardware.
-
-1. System Architecture – Public View
-1.1 Layered Architecture Overview
+```text
 ┌────────────────────────────────────┐
 │ UI / API Layer                     │
 │ (Operator, Admin, Integrations)    │
@@ -57,196 +56,168 @@ EMS is supervisory intelligence, not protection hardware.
 │ Data & Interface Layer             │
 │ (Meters, Relays, Controllers)      │
 └────────────────────────────────────┘
+```
 
+This separation ensures:
 
-This layered separation ensures:
+- Deterministic behavior
+- Auditable decisions
+- Clear responsibility boundaries
 
-Deterministic behavior
+### 1.2 EMS vs protection vs device control
 
-Auditable decisions
+| Layer | Responsibility | Owner |
+|---|---|---|
+| Protection | Trip on unsafe electrical conditions | Certified relay |
+| Device control | Real-time control loops | PCS / DG controller |
+| EMS | Authorization, sequencing, coordination | EnergizeOS™ |
 
-Clear responsibility boundaries
+---
 
-1.2 EMS vs Protection vs Device Control
-Layer	Responsibility	Owner
-Protection	Trip on unsafe electrical conditions	Certified Relay
-Device Control	Real-time control loops	PCS / DG Controller
-EMS	Authorization, sequencing, coordination	EnergizeOS™
-2. Core Functional Domains (Public Scope)
-2.1 Grid Interaction & Operating States
+## 2. Core functional domains (public scope)
 
-Grid-connected operation
+### 2.1 Grid interaction and operating states
 
-Islanded operation
+- Grid-connected operation
+- Islanded operation
+- Transition handling (Grid ↔ Island)
+- State-aware authorization logic
 
-Transition handling (Grid ↔ Island)
+> EMS decides **when**; hardware decides **how fast**.
 
-State-aware authorization logic
+### 2.2 Energy resource coordination
 
-EMS decides when, hardware decides how fast.
+Managed resources typically include:
 
-2.2 Energy Resource Coordination
-
-Battery Energy Storage Systems (BESS)
-
-Photovoltaic (PV) generation
-
-Diesel / Gas Generators (DG)
-
-Site loads and critical loads
+- Battery Energy Storage Systems (BESS)
+- Photovoltaic (PV) generation
+- Diesel / gas generators (DG)
+- Site loads and critical loads
 
 EMS provides:
 
-Priority coordination
+- Priority coordination
+- Constraint-aware dispatch
+- Mode-dependent behavior
 
-Constraint-aware dispatch
+### 2.3 Strategy-based control framework
 
-Mode-dependent behavior
+EnergizeOS™ EMS executes **explicit, versioned strategy modules**, such as:
 
-2.3 Strategy-Based Control Framework
+- Demand Charge Management (DCM)
+- Time-of-Use Optimization (TOU)
+- Grid / Island Transition Control
+- Renewable Energy Utilization
+- Generator Coordination (optional)
 
-EnergizeOS™ EMS executes explicit, versioned strategy modules, such as:
+> Strategies are policy-driven, not hardcoded behaviors.
 
-Demand Charge Management (DCM)
+---
 
-Time-of-Use Optimization (TOU)
+## 3. Control authority and safety philosophy
 
-Grid / Island Transition Control
+### 3.1 Control authority rules
 
-Renewable Energy Utilization
+**Trip authority**
 
-Generator Coordination (optional)
+- Primary: protection relay
+- Secondary: EMS (redundant, supervised)
 
-Strategies are policy-driven, not hardcoded behaviors.
+**Close authority**
 
-3. Control Authority & Safety Philosophy
-3.1 Control Authority Rules
+- EMS is the **sole authorized** source
+- Any non-EMS closing path is considered **out of scope**
 
-Trip authority:
+### 3.2 Safety-by-design principles
 
-Primary: Protection relay
+- Fail-safe over fail-operational
+- Hardware-first protection
+- Software-gated authorization
+- Explicit interlock conditions
+- Deterministic state transitions
 
-Secondary: EMS (redundant, supervised)
+---
 
-Close authority:
+## 4. Deployment and integration model (public)
 
-EMS is the sole authorized source
+### 4.1 Typical deployment elements
 
-Any non-EMS closing path is considered out of scope.
+- EMS Control Panel (ECP)
+- Anti-Islanding Protection Panel (AIPP)
+- Certified protection relays
+- Utility-grade meters
+- UPS-backed control power
 
-3.2 Safety-by-Design Principles
+### 4.2 EMS integration interfaces
 
-Fail-safe over fail-operational
+- Discrete I/O (DO / DI)
+- Industrial protocols (e.g., Modbus TCP)
+- Event & status feedback loops
 
-Hardware-first protection
+> Interface definitions exist, but are not public artifacts.
 
-Software-gated authorization
+---
 
-Explicit interlock conditions
-
-Deterministic state transitions
-
-4. Deployment & Integration Model (Public)
-4.1 Typical Deployment Elements
-
-EMS Control Panel (ECP)
-
-Anti-Islanding Protection Panel (AIPP)
-
-Certified Protection Relays
-
-Meters (utility-grade)
-
-UPS-backed control power
-
-4.2 EMS Integration Interfaces
-
-Discrete IO (DO / DI)
-
-Industrial communication protocols (e.g., Modbus TCP)
-
-Event & status feedback loops
-
-Interface definitions exist, but are not public artifacts.
-
-5. Observability, Audit & Traceability
+## 5. Observability, audit, and traceability
 
 EnergizeOS™ EMS emphasizes engineering auditability:
 
-State transitions are logged
-
-Decisions are attributable to conditions
-
-Strategy execution is traceable
-
-Operator actions are recorded
+- State transitions are logged
+- Decisions are attributable to conditions
+- Strategy execution is traceable
+- Operator actions are recorded
 
 This enables:
 
-FAT / SAT validation
+- FAT / SAT validation
+- Post-event analysis
+- Regulatory support
 
-Post-event analysis
+---
 
-Regulatory support
+## 6. Public vs private knowledge boundary
 
-6. Public vs Private Knowledge Boundary
-6.1 Publicly Available (This Repository)
+### 6.1 Publicly available (this repository)
 
-System architecture overview
+- System architecture overview
+- Functional scope definitions
+- Role & responsibility boundaries
+- Strategy categories (not implementations)
+- Deployment concepts
 
-Functional scope definitions
+### 6.2 Restricted / private (not public)
 
-Role & responsibility boundaries
+- I/O point tables
+- Relay wiring diagrams
+- FAT procedures
+- Interlock matrices
+- Strategy logic details
+- Control scripts & thresholds
 
-Strategy categories (not implementations)
+> These materials are delivered only under contract.
 
-Deployment concepts
+---
 
-6.2 Restricted / Private (Not Public)
+## 7. Intended audience
 
-IO point tables
+- EPCs & system integrators
+- Owners & asset operators
+- Utility & interconnection reviewers
+- Technical decision-makers
+- Investors & partners (technical due diligence)
 
-Relay wiring diagrams
+---
 
-FAT procedures
+## 8. Governance and change policy (public)
 
-Interlock matrices
+- This index is version-controlled
+- Structural changes require formal review
+- Terminology changes are treated as breaking changes
+- Implementation details will never be added here
 
-Strategy logic details
+---
 
-Control scripts & thresholds
+## 9. Canonical reference
 
-These materials are delivered only under contract.
-
-7. Intended Audience
-
-This Master Index is intended for:
-
-EPCs & System Integrators
-
-Owners & Asset Operators
-
-Utility & Interconnection reviewers
-
-Technical decision-makers
-
-Investors & partners (technical due diligence)
-
-8. Governance & Change Policy (Public)
-
-This index is version-controlled
-
-Structural changes require formal review
-
-Terminology changes are treated as breaking changes
-
-Implementation details will never be added here
-
-9. Canonical Reference
-
-System Name: EnergizeOS™ EMS
-
-Official Documentation Base:
-https://docs.energizeos.com/ems/
-
-End of Document
+- System name: **EnergizeOS™ EMS**
+- Official documentation base: **https://docs.energizeos.com/ems/**
